@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche de Personnage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Créateur de Fiche de Personnage</h1>
+        <form id="character-form">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name">
+            
+            <label for="class">Classe:</label>
+            <input type="text" id="class" name="class">
+            
+            <label for="race">Race:</label>
+            <input type="text" id="race" name="race">
+            
+            <label for="level">Niveau:</label>
+            <input type="number" id="level" name="level" min="1" max="20">
+            
+            <label for="background">Historique:</label>
+            <textarea id="background" name="background"></textarea>
+            
+            <button type="button" onclick="generateSheet()">Générer la fiche</button>
+        </form>
+        <div id="character-sheet">
+            <h2>Fiche de Personnage</h2>
+            <p><strong>Nom:</strong> <span id="display-name"></span></p>
+            <p><strong>Classe:</strong> <span id="display-class"></span></p>
+            <p><strong>Race:</strong> <span id="display-race"></span></p>
+            <p><strong>Niveau:</strong> <span id="display-level"></span></p>
+            <p><strong>Historique:</strong> <span id="display-background"></span></p>
+        </div>
+        <button onclick="window.print()">Imprimer la fiche</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
